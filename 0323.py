@@ -110,3 +110,53 @@ def magic(*args, **kwargs):
     print "unnamed args:", args
     print "keyword args:", kwargs
 magic(1, 2, 4, 5, 6, 7, key="word", key2="word2",id="123") # 有參數與沒參數
+
+
+
+
+print "------第四章------"
+
+from __future__ import division # want 3 / 2 == 1.5
+
+#
+# functions for working with vectors
+#
+# 向量相加
+def vector_add(v, w):
+    """adds two vectors componentwise"""
+    return [v_i + w_i for v_i, w_i in zip(v,w)]
+
+# 向量相減
+def vector_subtract(v, w):
+    """subtracts two vectors componentwise"""
+    return [v_i - w_i for v_i, w_i in zip(v,w)]
+a1=[1,2]
+a2=[3,4]
+print "add: "+str(vector_add(a1,a2))
+print "subtract: "+str(vector_subtract(a1,a2))
+
+# 向量加總
+def vector_sum(vectors):
+    return reduce(vector_add, vectors)
+a3=[[1,2],[3,4],[5,6]]
+print "sum: "+str(vector_sum(a3))
+
+# 向量相乘
+def scalar_multiply(c, v):
+    return [c * v_i for v_i in v]
+print "scalar: "+str(scalar_multiply(10,a1))
+
+#向量平均
+#要加 from __future__ import division
+def vector_mean(vectors):
+    """compute the vector whose i-th element is the mean of the
+    i-th elements of the input vectors"""
+    n = len(vectors)
+    return scalar_multiply(1/n, vector_sum(vectors))
+print "averge: "+str(vector_mean(a3))
+
+# 向量之間相乘
+def dot(v, w):
+    """v_1 * w_1 + ... + v_n * w_n"""
+    return sum(v_i * w_i for v_i, w_i in zip(v, w))
+print "dot: "+str(dot(a1,a2))
