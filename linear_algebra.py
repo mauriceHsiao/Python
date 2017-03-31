@@ -1,4 +1,4 @@
-# -*- coding: iso-8859-15 -*-
+#coding: utf-8
 
 from __future__ import division # want 3 / 2 == 1.5
 import re, math, random # regexes, math functions, random numbers
@@ -99,32 +99,22 @@ identity_matrix = make_matrix(5, 5, is_diagonal)
 
 #          user 0  1  2  3  4  5  6  7  8  9
 #
-friendships = [[0, 1, 1, 0, 0, 0, 0, 0, 0, 0], # user 0
-               [1, 0, 1, 1, 0, 0, 0, 0, 0, 0], # user 1
-               [1, 1, 0, 1, 0, 0, 0, 0, 0, 0], # user 2
-               [0, 1, 1, 0, 1, 0, 0, 0, 0, 0], # user 3
-               [0, 0, 0, 1, 0, 1, 0, 0, 0, 0], # user 4
-               [0, 0, 0, 0, 1, 0, 1, 1, 0, 0], # user 5
-               [0, 0, 0, 0, 0, 1, 0, 0, 1, 0], # user 6
-               [0, 0, 0, 0, 0, 1, 0, 0, 1, 0], # user 7
-               [0, 0, 0, 0, 0, 0, 1, 1, 0, 1], # user 8
-               [0, 0, 0, 0, 0, 0, 0, 0, 1, 0]] # user 9
+
 
 #####
 # DELETE DOWN
 #
 
-
+print "---兩矩陣相加---"
 def matrix_add(A, B):
     if shape(A) != shape(B):
         raise ArithmeticError("cannot add matrices with different shapes")
-        
     num_rows, num_cols = shape(A)
     def entry_fn(i, j): return A[i][j] + B[i][j]
         
     return make_matrix(num_rows, num_cols, entry_fn)
 
-
+print "---兩矩陣繪圖---"
 def make_graph_dot_product_as_vector_projection(plt):
 
     v = [2, 1]
@@ -140,9 +130,11 @@ def make_graph_dot_product_as_vector_projection(plt):
               width=0.002, head_width=.1, length_includes_head=True)
     plt.annotate("w", w, xytext=[w[0] - 0.1, w[1]])
     plt.arrow(0, 0, vonw[0], vonw[1], length_includes_head=True)
-    plt.annotate(u"(v•w)w", vonw, xytext=[vonw[0] - 0.1, vonw[1] + 0.1])
+    plt.annotate(u"(vâ¢w)w", vonw, xytext=[vonw[0] - 0.1, vonw[1] + 0.1])
     plt.arrow(v[0], v[1], vonw[0] - v[0], vonw[1] - v[1], 
               linestyle='dotted', length_includes_head=True)
     plt.scatter(*zip(v,w,o),marker='.')
     plt.axis('equal')
     plt.show()
+
+
