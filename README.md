@@ -4,13 +4,13 @@ Hsiao's Data Science from Scratch Notebook
 from:__[Data Science from Scratch](http://joelgrus.com/2015/04/26/data-science-from-scratch-first-principles-with-python/)__
 
 
-## Book of Contents
-1. Introduction
-2. A Crash Course in Python
-3. [Visualizing Data](https://github.com/joelgrus/data-science-from-scratch/blob/master/code/visualizing_data.py)
-4. [Linear Algebra](https://github.com/joelgrus/data-science-from-scratch/blob/master/code/linear_algebra.py)
-5. [Statistics](https://github.com/joelgrus/data-science-from-scratch/blob/master/code/statistics.py)
-6. [Probability](https://github.com/joelgrus/data-science-from-scratch/blob/master/code/probability.py)
+## Book of Contents(Finish Time)
+1. Introduction (2017/03/09)
+2. A Crash Course in Python (2017/03/16)
+3. [Visualizing Data](https://github.com/joelgrus/data-science-from-scratch/blob/master/code/visualizing_data.py) (2017/03/23)
+4. [Linear Algebra](https://github.com/joelgrus/data-science-from-scratch/blob/master/code/linear_algebra.py) (2017/03/30) 
+5. [Statistics](https://github.com/joelgrus/data-science-from-scratch/blob/master/code/statistics.py) (2017/03/30)
+6. [Probability](https://github.com/joelgrus/data-science-from-scratch/blob/master/code/probability.py) (2017/04/06)
 7. [Hypothesis and Inference](https://github.com/joelgrus/data-science-from-scratch/blob/master/code/hypothesis_and_inference.py)
 8. [Gradient Descent](https://github.com/joelgrus/data-science-from-scratch/blob/master/code/gradient_descent.py)
 9. [Getting Data](https://github.com/joelgrus/data-science-from-scratch/blob/master/code/getting_data.py)
