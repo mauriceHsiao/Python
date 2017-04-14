@@ -1,7 +1,7 @@
 # coding=utf-8
 from __future__ import division
 from collections import Counter
-from linear_algebra import sum_of_squares, dot
+from linear_algebra2 import sum_of_squares, dot
 from matplotlib import pyplot as plt
 import math
 
