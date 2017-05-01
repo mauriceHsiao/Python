@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../data-science-from-scratch/.idea/data-science-from-scratch.iml" filepath="$PROJECT_DIR$/../data-science-from-scratch/.idea/data-science-from-scratch.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/untitled2.iml" filepath="$PROJECT_DIR$/.idea/untitled2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/python.iml" filepath="$PROJECT_DIR$/.idea/python.iml" />
     </modules>
   </component>
 </project>
