@@ -1,9 +1,9 @@
 # coding=utf-8
 import dateutil.parser
-import csv
-data = []
+import csv,re
 
-print "-----4/12台灣股市資料轉換-----"
+print "-----4/12台灣股市資料檢查型別-----"
+data = []
 def try_or_none(f):
     """wraps f to return None if f raises an exception
     assumes f takes only one input"""
@@ -35,6 +35,29 @@ for row in data:
         print row
 
 
+print "-----正規表達式檢查類型-----"
+# . 代表任意字元
+# + 代表1個以上
+# \w 代表任意字(除了符號、空白)
+# \d 代表任意數字
+
+data2 = []
+with open("test2.csv", "rb") as f:
+    reader = csv.reader(f)
+    for x in reader:
+        data2.append(x)
+
+re1 = r'\d+\.\d{2}'
+re2 = r'\d+%'
+for i in range(len(data2)):
+    print data2[i]
+    #print re.findall(re1, str(data2[i][2]))
+    # if re.findall(re1, str(data2[i][2])) == []:
+    #     print "type error",str(data2[i][2])
+    # if re.findall(re1, str(data2[i][3])) == []:
+    #     print "type error",str(data2[i][3])
+
+
 print "-----330-412微軟股市最高收盤價與交易量-----"
 def try_parse_field(field_name, value, parser_dict):
     """try to parse value using the appropriate function from parser_dict"""
@@ -52,13 +75,13 @@ def parse_dict(input_dict, parser_dict):
 with open("stocks.csv", "rb") as f:
     reader = csv.DictReader(f, delimiter=",")
     data = [parse_dict(row, {'date': dateutil.parser.parse,
-                             'Volume': float})
+                             'Open': float})
             for row in reader]
 
 max_msft_price = max(row["AdjClose"]
                      for row in data
                      )
-max_msft_Volume = max(row["Volume"]
+max_msft_Volume = max(row["Open"]
                      for row in data
                      )
 
@@ -79,7 +102,6 @@ yData = yTrue + np.random.normal(0, 100, N)
 xData = np.reshape(xData, (N, 1))
 yData = np.reshape(yData, (N, 1))
 data = np.hstack((xData, yData))
-# print data
 
 mu = data.mean(axis=0)
 data = data - mu
