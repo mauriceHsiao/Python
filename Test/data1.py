@@ -50,7 +50,7 @@ with open("test2.csv", "rb") as f:
 re1 = r'\d+\.\d{2}'
 re2 = r'\d+%'
 for i in range(len(data2)):
-    print data2[i]
+     print data2[i]
     #print re.findall(re1, str(data2[i][2]))
     # if re.findall(re1, str(data2[i][2])) == []:
     #     print "type error",str(data2[i][2])
@@ -75,13 +75,13 @@ def parse_dict(input_dict, parser_dict):
 with open("stocks.csv", "rb") as f:
     reader = csv.DictReader(f, delimiter=",")
     data = [parse_dict(row, {'date': dateutil.parser.parse,
-                             'Open': float})
+                             'Volume': float})
             for row in reader]
 
 max_msft_price = max(row["AdjClose"]
                      for row in data
                      )
-max_msft_Volume = max(row["Open"]
+max_msft_Volume = max(row["Volume"]
                      for row in data
                      )
 
@@ -119,4 +119,4 @@ for axis in eigenvectors:
         xytext=start, textcoords='data',
         arrowprops=dict(facecolor='red', width=2.0))
 ax.set_aspect('equal')
-plt.show()
+#plt.show()
