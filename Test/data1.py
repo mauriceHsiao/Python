@@ -50,7 +50,7 @@ with open("test2.csv", "rb") as f:
 re1 = r'\d+\.\d{2}'
 re2 = r'\d+%'
 for i in range(len(data2)):
-     print data2[i]
+    print data2[i]
     #print re.findall(re1, str(data2[i][2]))
     # if re.findall(re1, str(data2[i][2])) == []:
     #     print "type error",str(data2[i][2])
