@@ -269,7 +269,8 @@ def train_and_test_model(path):
     hammiest_words = words[:5]
     print "spammiest_words", spammiest_words
     print "hammiest_words", hammiest_words
-train_and_test_model(r"C:\Users\OPPOS\Desktop\spam\*\*")
+train_and_test_model(r"spam\*\*")
+
 
 print "---simple linear regression---"
 from statistics import mean, correlation, standard_deviation, de_mean
