@@ -30,3 +30,6 @@ from:__[Data Science from Scratch](http://joelgrus.com/2015/04/26/data-science-f
 23. [Databases and SQL](https://github.com/joelgrus/data-science-from-scratch/blob/master/code/databases.py)
 24. [MapReduce](https://github.com/joelgrus/data-science-from-scratch/blob/master/code/mapreduce.py)
 25. Go Forth And Do Data Science
+
+# License
+The [MIT](LICENSE) License
